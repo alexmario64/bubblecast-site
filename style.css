@@ -1,0 +1,24 @@
+:root{color-scheme:light;--bg:#f4f5f8;--glow:#e9e6ff;--surface:#fff;--line:#1d1d2614;--text:#1d1d26;--text-2:#5d5f6e;--accent:#5b63ff;--accent-grad:linear-gradient(145deg,#7d6bff,#4f7dff);--tile:radial-gradient(circle at 30% 25%,#3a3550,#16141d 70%);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#14121a;--glow:#3a35507a;--surface:#24222e;--line:#ffffff14;--text:#ecebf3;--text-2:#b6b3c6;--accent:#a58bff;--accent-grad:linear-gradient(145deg,#a58bff,#5f8bff)}}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 0 0,var(--glow) 0,transparent 55%),var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+main,header,footer{max-width:720px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+header{display:flex;align-items:center;gap:12px;padding-block:28px 0}
+header a{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none;font-weight:700;font-size:18px}
+.tile{width:40px;height:40px;border-radius:11px;background:var(--tile);display:grid;place-items:center}
+.tile img{width:30px;height:30px}
+nav{margin-left:auto;display:flex;gap:18px;font-size:14px}
+nav a{color:var(--text-2);text-decoration:none}nav a:hover{color:var(--accent)}
+main{padding-block:48px 32px}
+h1{font-size:clamp(32px,6vw,48px);line-height:1.1;letter-spacing:-.02em;margin:0 0 16px;text-wrap:balance}
+h1 span{background:var(--accent-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:20px;margin:40px 0 8px;letter-spacing:-.01em}
+p,li{color:var(--text-2);max-width:65ch}
+.lede{font-size:19px;color:var(--text)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:32px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.card strong{display:block;margin-bottom:4px}.card p{margin:0;font-size:14px}
+a{color:var(--accent)}
+code{font-size:.9em;background:var(--line);padding:1px 5px;border-radius:5px}
+footer{padding-block:24px 40px;font-size:13px;color:var(--text-2);border-top:1px solid var(--line)}
+footer a{color:var(--text-2)}
